@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Parent Weekly Planner 2026 | Your First Year Companion</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ :root {
+ --cream: #F5EFE4;
+ --cream-dk: #EDE4D6;
+ --orange: #E8431A;
+ --blue: #1B6FB5;
+ --blue-lt: #5CB8D4;
+ --teal: #1A7872;
+ --yellow: #F0A91C;
+ --pink: #F2A0B0;
+ --black: #1C1410;
+ --white: #FFFFFF;
+ --muted: #6B5B4E;
+ }
+ html { scroll-behavior: smooth; }
+ body { font-family: 'Nunito Sans', sans-serif; background: var(--cream); color: var(--black); overflow-x: hidden; }
+
+ /* ── HERO ── */
+ .hero {
+ background: var(--cream);
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ align-items: center;
+ min-height: 100vh;
+ position: relative;
+ overflow: hidden;
+ }
+ .hero-blobs { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+ .hero-text { padding: 80px 56px 80px 72px; position: relative; z-index: 2; }
+ .eyebrow {
+ display: inline-flex; align-items: center; gap: 8px;
+ background: var(--orange); color: var(--white);
+ font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 11px;
+ letter-spacing: 0.18em; text-transform: uppercase;
+ padding: 7px 16px; border-radius: 50px; margin-bottom: 28px;
+ }
+ h1 { font-family: 'Nunito', sans-serif; font-size: clamp(40px, 5vw, 64px); font-weight: 800; line-height: 1.08; color: var(--black); margin-bottom: 24px; }
+ h1 .accent-blue { color: var(--blue); }
+ h1 .accent-orange { color: var(--orange); }
+ .hero-desc { font-size: 17px; line-height: 1.8; color: var(--muted); max-width: 440px; margin-bottom: 44px; }
+ .cta-row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+ .btn-primary {
+ display: inline-flex; align-items: center; gap: 10px;
+ background: var(--orange); color: var(--white);
+ font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 800;
+ padding: 18px 36px; border-radius: 50px; text-decoration: none;
+ transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 0 #b5320d;
+ }
+ .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 7px 0 #b5320d; }
+ .price-tag { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 32px; color: var(--black); line-height: 1; }
+ .price-tag small { display: block; font-family: 'Nunito Sans', sans-serif; font-size: 12px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+
+ /* ── HERO PHOTO ── */
+ .hero-visual { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 2; padding: 40px; }
+ .hero-photo {
+ width: 100%; max-width: 480px;
+ border-radius: 20px;
+ box-shadow: 20px 24px 80px rgba(28,20,16,0.22), 0 4px 20px rgba(28,20,16,0.10);
+ object-fit: cover;
+ animation: float 5s ease-in-out infinite;
+ }
+ @keyframes float {
+ 0%, 100% { transform: translateY(0) rotate(-1deg); }
+ 50% { transform: translateY(-12px) rotate(-1deg); }
+ }
+ .price-circle {
+ position: absolute; top: 60px; right: 20px;
+ width: 88px; height: 88px; border-radius: 50%;
+ background: var(--yellow); display: flex; flex-direction: column;
+ align-items: center; justify-content: center; text-align: center;
+ box-shadow: 0 4px 16px rgba(240,169,28,0.4);
+ animation: spin-slow 14s linear infinite;
+ }
+ .price-circle-inner { animation: spin-slow 14s linear infinite reverse; }
+ .price-circle-inner .num { display: block; font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 800; color: var(--black); line-height: 1; }
+ .price-circle-inner .lbl { font-family: 'Nunito', sans-serif; font-size: 7.5px; font-weight: 700; letter-spacing: 0.04em; line-height: 1.4; color: var(--black); }
+ @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+ /* ── TRUST BAR ── */
+ .trust-bar {
+ background: var(--black); padding: 18px 72px;
+ display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap;
+ }
+ .trust-item { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,0.72); font-size: 13px; font-weight: 600; }
+ .trust-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+ /* ── SECTIONS ── */
+ .section { padding: 96px 72px; position: relative; overflow: hidden; }
+ .section-label {
+ display: inline-flex; align-items: center; gap: 8px;
+ font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 11px;
+ letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px;
+ }
+ .section-label::before { content: ''; display: block; width: 20px; height: 3px; background: var(--orange); border-radius: 2px; }
+ h2 { font-family: 'Nunito', sans-serif; font-size: clamp(30px, 4vw, 48px); font-weight: 800; color: var(--black); line-height: 1.12; margin-bottom: 16px; }
+ .section-intro { font-size: 17px; line-height: 1.8; color: var(--muted); max-width: 540px; margin-bottom: 56px; }
+
+ /* ── PHOTO GALLERY ── */
+ .gallery-section { background: var(--white); padding: 96px 72px; }
+ .gallery-grid {
+ display: grid;
+ grid-template-columns: 1.6fr 1fr;
+ grid-template-rows: auto auto;
+ gap: 16px;
+ margin-top: 48px;
+ }
+ .gallery-img {
+ width: 100%; border-radius: 16px; object-fit: cover;
+ box-shadow: 0 8px 32px rgba(28,20,16,0.10);
+ transition: transform 0.25s, box-shadow 0.25s;
+ display: block;
+ }
+ .gallery-img:hover { transform: scale(1.02); box-shadow: 0 16px 48px rgba(28,20,16,0.16); }
+ .gallery-tall { grid-row: 1 / 3; height: 540px; object-fit: cover; }
+ .gallery-short { height: 260px; }
+
+ /* ── FEATURES GRID ── */
+ .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+ .feat-card {
+ background: var(--white); border-radius: 20px; padding: 32px 28px;
+ transition: transform 0.22s, box-shadow 0.22s; border: 2px solid transparent;
+ }
+ .feat-card:hover { transform: translateY(-5px); box-shadow: 0 20px 56px rgba(28,20,16,0.10); }
+ .feat-card.c-orange { border-color: var(--orange); }
+ .feat-card.c-blue { border-color: var(--blue); }
+ .feat-card.c-yellow { border-color: var(--yellow); }
+ .feat-card.c-teal { border-color: var(--teal); }
+ .feat-card.c-pink { border-color: var(--pink); }
+ .feat-card.c-bluelt { border-color: var(--blue-lt); }
+ .feat-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 18px; }
+ .ic-orange { background: #FDE8E2; } .ic-blue { background: #DFF0FB; } .ic-yellow { background: #FEF4DC; }
+ .ic-teal { background: #D5EDEB; } .ic-pink { background: #FDEAEE; } .ic-bluelt { background: #DFF5FB; }
+ .feat-card h3 { font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 800; color: var(--black); margin-bottom: 9px; }
+ .feat-card p { font-size: 14px; line-height: 1.75; color: var(--muted); }
+
+ /* ── CONTENTS ── */
+ .contents-section { background: var(--blue); padding: 96px 72px; }
+ .contents-section h2 { color: var(--white); }
+ .contents-section .section-label { color: var(--yellow); }
+ .contents-section .section-label::before { background: var(--yellow); }
+ .contents-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+ .chapter-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+ .chapter { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.12); display: flex; align-items: baseline; gap: 10px; }
+ .ch-num { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 11px; color: var(--yellow); min-width: 22px; }
+ .ch-name { font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.4; }
+ .contents-right h3 { font-family: 'Nunito', sans-serif; font-size: 26px; font-weight: 800; color: var(--white); margin-bottom: 18px; line-height: 1.25; }
+ .contents-right p { font-size: 15px; line-height: 1.85; color: rgba(255,255,255,0.72); margin-bottom: 20px; }
+ .stat-row { display: flex; gap: 36px; margin-top: 36px; flex-wrap: wrap; }
+ .stat .num { display: block; font-family: 'Nunito', sans-serif; font-size: 40px; font-weight: 800; color: var(--yellow); line-height: 1; }
+ .stat .lbl { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.55); margin-top: 4px; letter-spacing: 0.04em; }
+
+ /* ── AUTHORS ── */
+ .authors-section { background: var(--yellow); padding: 96px 72px; }
+ .authors-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; max-width: 960px; }
+ .authors-section .section-label { color: var(--black); }
+ .authors-section .section-label::before { background: var(--black); }
+ blockquote { font-family: 'Nunito', sans-serif; font-size: clamp(18px,2.2vw,26px); font-weight: 700; font-style: italic; color: var(--black); line-height: 1.5; padding-left: 20px; border-left: 5px solid var(--orange); }
+ .author-cards { display: flex; flex-direction: column; gap: 14px; }
+ .author-card { background: var(--white); border-radius: 16px; padding: 18px 22px; display: flex; align-items: center; gap: 14px; }
+ .author-av { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 800; font-style: italic; color: var(--white); flex-shrink: 0; }
+ .av-orange { background: var(--orange); } .av-blue { background: var(--blue); }
+ .author-card h4 { font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; color: var(--black); margin-bottom: 3px; }
+ .author-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+ /* ── PRICING ── */
+ .pricing-section { background: var(--orange); padding: 96px 72px; text-align: center; }
+ .pricing-section h2 { color: var(--white); }
+ .pricing-section .section-label { color: var(--yellow); justify-content: center; }
+ .pricing-section .section-label::before { background: var(--yellow); }
+ .pricing-section .section-intro { color: rgba(255,255,255,0.8); margin: 0 auto 56px; }
+ .pricing-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; max-width: 1100px; margin: 0 auto; }
+ .pricing-card.slim { padding: 32px 30px 28px; }
+ .pricing-card { background: var(--white); border-radius: 24px; padding: 40px 40px 36px; box-shadow: 0 32px 80px rgba(28,20,16,0.22); position: relative; text-align: left; }
+ .pricing-card.featured { border: 3px solid var(--yellow); }
+ .card-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--yellow); color: var(--black); font-family: 'Nunito', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 18px; border-radius: 50px; white-space: nowrap; }
+ .pricing-card h3 { font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: 0.10em; text-transform: uppercase; margin-bottom: 6px; }
+ .card-title { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 800; color: var(--black); margin-bottom: 16px; line-height: 1.2; }
+ .price-line { display: flex; align-items: flex-end; gap: 4px; margin-bottom: 8px; }
+ .price-curr { font-family: 'Nunito', sans-serif; font-size: 22px; font-weight: 800; color: var(--muted); padding-bottom: 8px; }
+ .price-num { font-family: 'Nunito', sans-serif; font-size: 60px; font-weight: 800; color: var(--black); line-height: 1; }
+ .price-sub { font-size: 12px; color: var(--muted); margin-bottom: 28px; line-height: 1.6; }
+ .perks { list-style: none; text-align: left; margin-bottom: 32px; }
+ .perks li { padding: 9px 0; border-bottom: 1px solid rgba(28,20,16,0.07); font-size: 13px; color: var(--black); display: flex; align-items: center; gap: 11px; font-weight: 600; }
+ .perks li:last-child { border-bottom: none; }
+ .perk-dot { width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: var(--white); background: var(--teal); }
+ .perk-dot.orange { background: var(--orange); }
+ .btn-buy { display: block; width: 100%; background: var(--orange); color: var(--white); font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 800; padding: 18px; border-radius: 50px; text-decoration: none; text-align: center; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 0 #b5320d; }
+ .btn-buy:hover { transform: translateY(-3px); box-shadow: 0 7px 0 #b5320d; }
+ .btn-buy-outline { display: block; width: 100%; background: transparent; color: var(--orange); border: 2.5px solid var(--orange); font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 800; padding: 16px; border-radius: 50px; text-decoration: none; text-align: center; transition: transform 0.2s, background 0.2s, color 0.2s; }
+ .btn-buy-outline:hover { background: var(--orange); color: var(--white); transform: translateY(-3px); }
+ .secure-note { margin-top: 12px; font-size: 11px; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 5px; font-weight: 600; }
+ .gift-note { margin-top: 12px; font-size: 11px; color: var(--muted); text-align: center; line-height: 1.5; font-weight: 600; }
+ @media (max-width: 960px) { .pricing-cards { grid-template-columns: 1fr 1fr; } }
+ @media (max-width: 700px) { .reviews-grid { grid-template-columns: 1fr !important; } }
+ @media (max-width: 600px) { .pricing-cards { grid-template-columns: 1fr; } }
+ /* ── GUARANTEE ── */
+ .guarantee { background: var(--teal); padding: 56px 72px; display: flex; align-items: center; justify-content: center; gap: 44px; flex-wrap: wrap; }
+ .guar-icon { font-size: 60px; flex-shrink: 0; }
+ .guar-text h3 { font-family: 'Nunito', sans-serif; font-size: 22px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+ .guar-text p { font-size: 15px; color: rgba(255,255,255,0.75); max-width: 500px; line-height: 1.75; }
+
+ /* ── FOOTER ── */
+ footer { background: var(--black); padding: 36px 72px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+ .footer-brand { font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 800; color: var(--yellow); }
+ footer p { font-size: 12px; color: rgba(255,255,255,0.38); font-weight: 600; }
+
+ /* ── RESPONSIVE ── */
+ @media (max-width: 900px) {
+ .hero { grid-template-columns: 1fr; min-height: auto; }
+ .hero-text { padding: 60px 40px 40px; }
+ .hero-visual { height: auto; padding: 40px; }
+ .section, .contents-section, .pricing-section, .authors-section, .gallery-section { padding: 64px 40px; }
+ .features-grid { grid-template-columns: 1fr 1fr; }
+ .contents-cols, .authors-layout { grid-template-columns: 1fr; gap: 40px; }
+ .chapter-list { grid-template-columns: 1fr; }
+ .gallery-grid { grid-template-columns: 1fr 1fr; }
+ .gallery-tall { grid-row: auto; height: 240px; }
+ .gallery-short { height: 240px; }
+ .trust-bar { padding: 18px 40px; gap: 28px; }
+ footer, .guarantee { padding: 32px 40px; }
+ }
+ @media (max-width: 600px) {
+ .hero-text { padding: 40px 24px 28px; }
+ .section, .contents-section, .pricing-section, .authors-section, .gallery-section { padding: 52px 24px; }
+ .features-grid { grid-template-columns: 1fr; }
+ .gallery-grid { grid-template-columns: 1fr; }
+ .gallery-tall { height: 280px; }
+ .cta-row { flex-direction: column; align-items: flex-start; }
+ footer, .guarantee { padding: 28px 24px; }
+ }
+</style>
+</head>
+<body>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
+ <svg class="hero-blobs" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+ <ellipse cx="980" cy="80" rx="180" ry="70" fill="#E8431A" opacity="0.10" transform="rotate(-25 980 80)"/>
+ <ellipse cx="1050" cy="150" rx="120" ry="45" fill="#1B6FB5" opacity="0.09" transform="rotate(-15 1050 150)"/>
+ <ellipse cx="900" cy="200" rx="90" ry="32" fill="#F0A91C" opacity="0.12" transform="rotate(10 900 200)"/>
+ <circle cx="40" cy="340" r="64" fill="#5CB8D4" opacity="0.11"/>
+ <circle cx="-10" cy="580" r="88" fill="#F0A91C" opacity="0.08"/>
+ <circle cx="680" cy="840" r="52" fill="#F2A0B0" opacity="0.15"/>
+ <circle cx="200" cy="120" r="6" fill="#1C1410" opacity="0.12"/>
+ <circle cx="222" cy="150" r="4" fill="#1C1410" opacity="0.10"/>
+ </svg>
+
+ <div class="hero-text">
+ <span class="eyebrow">Digital Download · Instant Access</span>
+ <h1>A Weekly Planner<br>for <span class="accent-blue">New</span> <span class="accent-orange">Parents</span></h1>
+ <p class="hero-desc">The early weeks are overwhelming — even when they’re wonderful. We wrote this because we wished we’d had it ourselves. 117 pages of practical tips, recipes, timely reminders and honest advice, walking you through every single week of your baby’s first year.</p>
+ <div class="cta-row">
+ <a href="#pricing" class="btn-primary">Get Your Copy →</a>
+ <div class="price-tag">£18.99 <small>One-time · instant download</small></div>
+ </div>
+ </div>
+
+ <div class="hero-visual">
+ <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; width:100%; max-width:520px; align-items:start; animation: float 5s ease-in-out infinite;">
+ <img src="images/image-1.jpg" style="width:100%; border-radius:12px; box-shadow:0 8px 32px rgba(28,20,16,0.18); display:block;" alt="New Parent Weekly Planner - cover page">
+ <img src="images/image-2.jpg" style="width:100%; border-radius:12px; box-shadow:0 8px 32px rgba(28,20,16,0.18); display:block; margin-top:24px;" alt="New Parent Weekly Planner - contents pages 1–26">
+ <img src="images/image-3.jpg" style="width:100%; border-radius:12px; box-shadow:0 8px 32px rgba(28,20,16,0.18); display:block; margin-top:48px;" alt="New Parent Weekly Planner - more contents pages 27–52">
+ </div>
+ <div class="price-circle">
+ <div class="price-circle-inner">
+ <span class="num">117</span>
+ <span class="lbl">pages</span>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ════ TRUST BAR ════ -->
+<div class="trust-bar">
+ <div class="trust-item"><span class="trust-dot" style="background:var(--orange)"></span>Editable &amp; printable PDF</div>
+ <div class="trust-item"><span class="trust-dot" style="background:var(--yellow)"></span>Written by real mums</div>
+ <div class="trust-item"><span class="trust-dot" style="background:var(--blue-lt)"></span>52 weekly planning pages</div>
+ <div class="trust-item"><span class="trust-dot" style="background:var(--pink)"></span>Secure checkout</div>
+</div>
+
+<!-- ════ FEATURES ════ -->
+<section class="section" style="background:var(--cream);">
+ <p class="section-label">What you get</p>
+ <h2>Everything you actually need</h2>
+ <p class="section-intro">Not an instruction manual. Not a judgement. Just real, practical knowledge from two experienced mums - including timely reminders for vaccinations, health visitor appointments, and all the baby admin that sneaks up on you. The companion they wish they'd had from day one.</p>
+ <div class="features-grid">
+ <div class="feat-card c-orange"><div class="feat-icon ic-orange">📅</div><h3>52 Weekly Planning Pages</h3><p>A full spread for every week - Monday to Sunday, notes, reminders, and useful lists so nothing slips through.</p></div>
+ <div class="feat-card c-blue"><div class="feat-icon ic-blue">💡</div><h3>Age-by-Age Tips & Guides</h3><p>From newborn essentials and vaccinations through teething, weaning, and childcare - guidance that arrives exactly when you need it.</p></div>
+ <div class="feat-card c-yellow"><div class="feat-icon ic-yellow">🍳</div><h3>Baby-Friendly Recipes</h3><p>Healthy pancakes, egg muffins, banana bread, pinwheels and more - all suitable from 6 months, all quick enough for real life.</p></div>
+ <div class="feat-card c-teal"><div class="feat-icon ic-teal">✅</div><h3>Handy Checklists</h3><p>Hospital Bag Basics · Nursery Basics · Baby Essentials · Baby Bag Essentials · Weaning Items &amp; Food Prep · Carry On (Travel Packing)</p></div>
+ <div class="feat-card c-pink"><div class="feat-icon ic-pink">✈️</div><h3>First Travel Guide</h3><p>Three full pages on travelling abroad with a baby - what to pack, what to expect, and how to actually enjoy it.</p></div>
+ <div class="feat-card c-bluelt"><div class="feat-icon ic-bluelt">🎂</div><h3>First Birthday Planning</h3><p>Gift ideas, party secrets, and a whole chapter on making that first birthday special and stress-free.</p></div>
+ </div>
+</section>
+
+<!-- ════ PHOTO GALLERY ════ -->
+
+
+<!-- ════ CONTENTS ════ -->
+<section class="section" style="background:var(--white); padding-top:0;">
+ <p class="section-label" style="padding-top:96px;">The hardcopy edition</p>
+ <h2>A gift they'll reach for every single day</h2>
+ <p class="section-intro" style="margin-bottom:0">Not another candle. Not another keepsake that ends up in a drawer. The hardcopy planner is something a new parent will actually use — open on the kitchen counter, lying perfectly flat thanks to the spiral binding, week after week for an entire year. Beautifully printed in full colour on quality paper, and unlike anything else you'll find to give.</p>
+ <div style="margin-top:48px; display:flex; flex-direction:column; gap:20px;">
+ <img class="gallery-img" style="width:100%; height:420px; object-fit:cover; object-position:center 35%;" src="images/image-4.jpg" alt="New Parent Weekly Planner hardcopy flatlay">
+ </div>
+</section>
+
+
+
+
+<div style="background:var(--yellow); padding:40px 72px; text-align:center;">
+ <p style="font-family:'Nunito',sans-serif; font-size:clamp(18px,2.5vw,26px); font-weight:800; color:var(--black); margin:0;">
+ 🎁 Looking for a unique gift for an expectant parent?
+ </p>
+ <p style="font-family:'Nunito Sans',sans-serif; font-size:16px; color:var(--black); opacity:0.75; margin:10px 0 20px;">
+ The hardcopy planner is a genuinely useful, beautifully made gift they'll treasure through their entire first year.
+ </p>
+ <a href="#pricing" style="display:inline-block; background:var(--orange); color:white; font-family:'Nunito',sans-serif; font-weight:800; font-size:15px; padding:14px 32px; border-radius:50px; text-decoration:none; box-shadow:0 4px 0 #b5320d;">Order the Hardcopy - £29.99</a>
+</div>
+
+<section class="contents-section">
+ <div class="contents-cols">
+
+ <div>
+ <p class="section-label">52 chapters</p>
+ <h2>A year of guidance</h2>
+ <p style="color:rgba(255,255,255,0.75); font-size:15px; line-height:1.85; margin-bottom:28px;">The planner walks you through your entire first year, week by week. Early chapters cover the newborn essentials - sleeping, feeding, startle reflex, swaddling, registering your baby, and those first health visitor appointments. As the weeks go on it moves through teething, vaccinations, getting out and about, socialising, and thinking about childcare.</p>
+ <p style="color:rgba(255,255,255,0.75); font-size:15px; line-height:1.85; margin-bottom:28px;">The middle section covers weaning in depth - when to start, what to buy, how to batch cook, and recipes to try. Later chapters tackle bigger milestones: baby-proofing, day trips, restaurants, travelling abroad, and planning that all-important first birthday.</p>
+ <p style="color:rgba(255,255,255,0.75); font-size:15px; line-height:1.85;">Every chapter arrives at the right moment - so the advice about weaning lands just as you're starting to think about it, and the travel guide appears when a holiday feels like a real possibility again.</p>
+ </div>
+
+ <div class="contents-right">
+ <h3>Plus: Handy Checklists &amp; Handy Things We Learnt</h3>
+ <p>At the back of the planner you'll find two bonus reference sections packed with genuinely useful information.</p>
+
+ <p style="font-family:'Nunito',sans-serif; font-weight:800; color:var(--yellow); font-size:14px; margin:20px 0 8px; letter-spacing:0.05em; text-transform:uppercase;">Handy Checklists</p>
+ <ul style="margin:0 0 0 4px; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:8px 16px;">
+  <li style="font-family:'Nunito',sans-serif; font-size:14px; color:var(--black);">☑ Hospital Bag Basics</li>
+  <li style="font-family:'Nunito',sans-serif; font-size:14px; color:var(--black);">☑ Nursery Basics</li>
+  <li style="font-family:'Nunito',sans-serif; font-size:14px; color:var(--black);">☑ Baby Essentials</li>
+  <li style="font-family:'Nunito',sans-serif; font-size:14px; color:var(--black);">☑ Baby Bag Essentials</li>
+  <li style="font-family:'Nunito',sans-serif; font-size:14px; color:var(--black);">☑ Weaning Items &amp; Useful Food Prep</li>
+  <li style="font-family:'Nunito',sans-serif; font-size:14px; color:var(--black);">☑ Carry On (Travel Packing)</li>
+ </ul>
+
+ <p style="font-family:'Nunito',sans-serif; font-weight:800; color:var(--yellow); font-size:14px; margin:20px 0 8px; letter-spacing:0.05em; text-transform:uppercase;">Handy Things We Learnt</p>
+ <p>The hard-won knowledge Gina and Carla wish someone had handed them. This section includes a sleeping bag tog chart so you always dress your baby at the right temperature, a night feeding location guide covering lighting, positioning, bottle prep, and breastfeeding, a breast milk storage table with timings for room temperature, fridge, and freezer, and a gagging vs choking reference guide - one of those things you hope you never need but will be very glad to have.</p>
+
+ <div class="stat-row">
+ <div class="stat"><span class="num">117</span><span class="lbl">Total pages</span></div>
+ <div class="stat"><span class="num">52</span><span class="lbl">Weekly spreads</span></div>
+ <div class="stat"><span class="num">6+</span><span class="lbl">Recipes</span></div>
+ </div>
+ </div>
+
+ </div>
+</section>
+
+<!-- ════ AUTHORS ════ -->
+<section class="authors-section">
+ <div class="authors-layout">
+ <div>
+ <p class="section-label">Written by real mums</p>
+ <blockquote>We wrote this not as an instruction manual, but as the friendly companion we wish we'd had.</blockquote>
+ </div>
+ <div class="author-cards">
+ <div class="author-card">
+ <div class="author-av av-blue">C</div>
+ <div><h4>Carla</h4><p>Mum to Austin (4) and Rose (2). Been through the newborn fog twice and lived to tell the tale.</p></div>
+ </div>
+ <div class="author-card">
+ <div class="author-av av-orange">G</div>
+ <div><h4>Gina</h4><p>Mum to James (6) and Eddie (2). Sister to Carla and co-creator of this planner.</p></div>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ════ REVIEWS ════ -->
+<section class="section" style="background:var(--cream);">
+ <p class="section-label">What parents are saying</p>
+ <h2>Loved by new parents</h2>
+ <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px;">
+
+ <div style="background:var(--white); border-radius:20px; padding:32px 28px; display:flex; flex-direction:column; gap:16px;">
+ <div style="display:flex; gap:4px; font-size:18px; color:var(--orange);">★★★★★</div>
+ <p style="font-family:'Nunito',sans-serif; font-size:16px; font-weight:700; color:var(--black); line-height:1.3;">"The best baby shower gift I've ever given"</p>
+ <p style="font-size:14px; line-height:1.75; color:var(--muted); flex:1;">I bought the hardcopy for my sister who was expecting her first. She messaged me the day it arrived to say how beautiful it was - and she's been using it every single week since the baby came. The reminders for vaccinations and appointments have been genuinely lifesaving. I wish I'd had this when I had mine!</p>
+ <div style="display:flex; align-items:center; gap:12px; padding-top:8px; border-top:1px solid rgba(28,20,16,0.07);">
+ <div style="width:38px; height:38px; border-radius:50%; background:var(--pink); display:flex; align-items:center; justify-content:center; font-family:'Nunito',sans-serif; font-weight:800; font-size:15px; color:var(--white); flex-shrink:0;">S</div>
+ <div>
+ <p style="font-family:'Nunito',sans-serif; font-size:13px; font-weight:800; color:var(--black); margin:0;">Sophie M.</p>
+ <p style="font-size:12px; color:var(--muted); margin:0;">Bought as a gift</p>
+ </div>
+ </div>
+ </div>
+
+ <div style="background:var(--white); border-radius:20px; padding:32px 28px; display:flex; flex-direction:column; gap:16px; border:2px solid var(--orange);">
+ <div style="display:flex; gap:4px; font-size:18px; color:var(--orange);">★★★★★</div>
+ <p style="font-family:'Nunito',sans-serif; font-size:16px; font-weight:700; color:var(--black); line-height:1.3;">"I don't know how I'd have coped without it"</p>
+ <p style="font-size:14px; line-height:1.75; color:var(--muted); flex:1;">As a first-time mum I was completely overwhelmed in those early weeks. Having this planner sitting on the kitchen table meant I always knew what was coming up - the vaccination reminders especially. It's written in such a warm, non-judgmental way. It felt like getting advice from a friend rather than a medical pamphlet. Worth every penny.</p>
+ <div style="display:flex; align-items:center; gap:12px; padding-top:8px; border-top:1px solid rgba(28,20,16,0.07);">
+ <div style="width:38px; height:38px; border-radius:50%; background:var(--blue-lt); display:flex; align-items:center; justify-content:center; font-family:'Nunito',sans-serif; font-weight:800; font-size:15px; color:var(--white); flex-shrink:0;">R</div>
+ <div>
+ <p style="font-family:'Nunito',sans-serif; font-size:13px; font-weight:800; color:var(--black); margin:0;">Rachel T.</p>
+ <p style="font-size:12px; color:var(--muted); margin:0;">Mum to Freddie, 14 months</p>
+ </div>
+ </div>
+ </div>
+
+ <div style="background:var(--white); border-radius:20px; padding:32px 28px; display:flex; flex-direction:column; gap:16px;">
+ <div style="display:flex; gap:4px; font-size:18px; color:var(--orange);">★★★★★</div>
+ <p style="font-family:'Nunito',sans-serif; font-size:16px; font-weight:700; color:var(--black); line-height:1.3;">"Brilliant - and so nicely put together"</p>
+ <p style="font-size:14px; line-height:1.75; color:var(--muted); flex:1;">My partner and I used the digital version and just printed the pages we needed each week. The weaning section was a game-changer - the recipes are quick and actually work! But honestly the whole thing just made us feel more prepared and less anxious. It covers everything from the practical stuff to the emotional side of being a new parent. Highly recommend.</p>
+ <div style="display:flex; align-items:center; gap:12px; padding-top:8px; border-top:1px solid rgba(28,20,16,0.07);">
+ <div style="width:38px; height:38px; border-radius:50%; background:var(--teal); display:flex; align-items:center; justify-content:center; font-family:'Nunito',sans-serif; font-weight:800; font-size:15px; color:var(--white); flex-shrink:0;">J</div>
+ <div>
+ <p style="font-family:'Nunito',sans-serif; font-size:13px; font-weight:800; color:var(--black); margin:0;">James &amp; Priya K.</p>
+ <p style="font-size:12px; color:var(--muted); margin:0;">Parents to twins, 8 months</p>
+ </div>
+ </div>
+ </div>
+
+ </div>
+</section>
+
+<!-- ════ PRICING ════ -->
+<section class="pricing-section" id="pricing">
+ <p class="section-label">Choose your copy</p>
+ <h2>Start your journey today</h2>
+ <p class="section-intro">Whether you want it on your phone, printed on the kitchen table, or wrapped up beautifully for someone who needs it - there's a version for you.</p>
+
+ <div class="pricing-cards">
+
+ <!-- CHECKLIST -->
+ <div class="pricing-card slim">
+ <h3>Add-on</h3>
+ <p class="card-title">New Parent Handy Checklists</p>
+ <div class="price-line"><span class="price-curr">£</span><span class="price-num">4.99</span></div>
+ <p class="price-sub">Editable &amp; printable PDF · 6 pages of checklists<br>Perfect companion to the planner</p>
+ <ul class="perks">
+ <li><span class="perk-dot" style="background:var(--blue)">✓</span>Hospital bag basics</li>
+ <li><span class="perk-dot" style="background:var(--blue)">✓</span>Post partum kit essentials</li>
+ <li><span class="perk-dot" style="background:var(--blue)">✓</span>Nursery &amp; baby essentials</li>
+ <li><span class="perk-dot" style="background:var(--blue)">✓</span>Baby bag checklist</li>
+ <li><span class="perk-dot" style="background:var(--blue)">✓</span>Weaning items &amp; food prep</li>
+ <li><span class="perk-dot" style="background:var(--blue)">✓</span>Carry-on travel checklist</li>
+ <li><span class="perk-dot" style="background:var(--blue)">✓</span>Printable tick-box format</li>
+ <li><span class="perk-dot" style="background:var(--blue)">✓</span>Instant download</li>
+ </ul>
+ <a href="#" class="btn-buy-outline" style="color:var(--blue);border-color:var(--blue);" onmouseover="this.style.background='#1B6FB5';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#1B6FB5'">Download for £4.99</a>
+ <p class="secure-note">🔒 Secure checkout · Instant delivery</p>
+ </div>
+
+ <!-- DIGITAL -->
+ <div class="pricing-card">
+ <h3>Digital</h3>
+ <p class="card-title">Instant PDF Download</p>
+ <div class="price-line"><span class="price-curr">£</span><span class="price-num">18.99</span></div>
+ <p class="price-sub">One-time payment · Editable PDF - type straight in, or print &amp; fill by hand</p>
+ <ul class="perks">
+ <li><span class="perk-dot">✓</span>117-page fully editable PDF</li>
+ <li><span class="perk-dot">✓</span>52 weekly planning spreads</li>
+ <li><span class="perk-dot">✓</span>Age-appropriate tips for every stage</li>
+ <li><span class="perk-dot">✓</span>6 tried-and-tested baby recipes</li>
+ <li><span class="perk-dot">✓</span>Handy checklists &amp; reference pages</li>
+ <li><span class="perk-dot">✓</span>First birthday planning guide</li>
+ <li><span class="perk-dot">✓</span>Travelling abroad with a baby guide</li>
+ <li><span class="perk-dot">✓</span>Use immediately after purchase</li>
+ </ul>
+ <a href="#" class="btn-buy-outline">Download for £18.99</a>
+ <p class="secure-note">🔒 Secure checkout · Instant delivery</p>
+ </div>
+
+ <!-- HARDCOPY GIFT -->
+ <div class="pricing-card featured">
+ <div class="card-badge">🎁 Perfect Gift</div>
+ <h3>Hardcopy</h3>
+ <p class="card-title">The Perfect Gift for First Time Parents</p>
+ <div class="price-line"><span class="price-curr">£</span><span class="price-num">29.99</span></div>
+ <p class="price-sub">One-time payment · Beautifully printed<br>Spiral-bound &amp; delivered to your door</p>
+ <ul class="perks">
+ <li><span class="perk-dot orange">✓</span>Everything in the digital version</li>
+ <li><span class="perk-dot orange">✓</span>Professionally printed &amp; bound</li>
+ <li><span class="perk-dot orange">✓</span>Spiral-bound for easy flat use</li>
+ <li><span class="perk-dot orange">✓</span>Full-colour throughout</li>
+ <li><span class="perk-dot orange">✓</span>Ready to write in straight away</li>
+ <li><span class="perk-dot orange">✓</span>A unique, thoughtful gift for expectant parents</li>
+ <li><span class="perk-dot orange">✓</span>Gift-ready presentation</li>
+ <li><span class="perk-dot orange">✓</span>Posted directly to recipient</li>
+ </ul>
+ <a href="#" class="btn-buy">Order Hardcopy for £29.99</a>
+ <p class="gift-note">🚚 UK delivery included · Usually ships within 3–5 days</p>
+ </div>
+
+ </div>
+</section>
+
+<!-- ════ GUARANTEE ════ -->
+<div class="guarantee">
+ <div class="guar-icon">💛</div>
+ <div class="guar-text">
+ <h3>Made with love, for real parents</h3>
+ <p>Every tip in here is something Gina or Carla genuinely wish they'd known. Nothing theoretical, nothing preachy — just two experienced mums passing on what actually helped.</p>
+ </div>
+</div>
+
+<!-- ════ FOOTER ════ -->
+<footer>
+ <span class="footer-brand">New Parent Weekly Planner</span>
+ <p>© 2026 · Digital download product · All rights reserved</p>
+</footer>
+
+</body>
+</html>
