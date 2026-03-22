@@ -60,6 +60,7 @@
 
  /* ── HERO PHOTO ── */
  .hero-visual { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 2; padding: 40px; }
+ .hero-img-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; width: min(100%, clamp(560px, 44vw, 900px)); align-items: start; animation: float 5s ease-in-out infinite; }
  .hero-photo {
  width: 100%; max-width: 480px;
  border-radius: 20px;
@@ -264,7 +265,7 @@
  </div>
 
  <div class="hero-visual">
- <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; width:100%; max-width:520px; align-items:start; animation: float 5s ease-in-out infinite;">
+ <div class="hero-img-grid">
  <img src="images/image-1.jpg" style="width:100%; border-radius:12px; box-shadow:0 8px 32px rgba(28,20,16,0.18); display:block;" alt="New Parent Weekly Planner - cover page">
  <img src="images/image-2.jpg" style="width:100%; border-radius:12px; box-shadow:0 8px 32px rgba(28,20,16,0.18); display:block; margin-top:24px;" alt="New Parent Weekly Planner - contents pages 1–26">
  <img src="images/image-3.jpg" style="width:100%; border-radius:12px; box-shadow:0 8px 32px rgba(28,20,16,0.18); display:block; margin-top:48px;" alt="New Parent Weekly Planner - more contents pages 27–52">
